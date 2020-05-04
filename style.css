@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Manjari', sans-serif;
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    background-color: #9182A6;
+    
+}
+
+.flex {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    flex-direction: column;
+}
+
+.todo__container {
+    background-color: white;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 30rem;
+    padding: 0px 0px 32px 0px;
+    border-radius: 14px;
+    box-shadow: 0px 24px 80px rgba(0, 45, 37, 0.24);
+}
+
+.todo__title {
+    text-align: center;
+    margin: 40px auto 32px auto;
+    display: inline-block;
+    font-size: 24px;
+    color:  #7E77A0;
+}
+
+.todo-form {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.todo__tarefas__sample {
+    max-width: 90%;
+    background: #7e77a01a;
+    margin: 0 auto;
+    height: 60px;
+    border-radius: 24px;
+    align-items: center;
+    padding: 20px;
+    margin: 16px auto;
+}
+
+.todo__tarefas__sample-content {
+    background: #8f88b325;
+    max-width: 50%;
+    height: 20px;
+    border-radius: 14px;
+}
+
+.todo-form__input {
+    width: 75%;
+    padding: 24px;
+    height: 60px;
+    background-color: #E6EEC6;
+    border-radius: 24px;
+    border: 0px;
+    outline: none;
+    margin-right: 3%;
+    
+}
+
+.todo-form__input:focus {
+    outline: none;
+    border: solid 3px #B0CF30;
+}
+
+.todo-form__btn {
+    background-color: #7E77A0;
+    text-transform: uppercase;
+    color: white;
+    width: 55px;
+    height: 55px;
+    /* padding: 20px; */
+    display: inline-block;
+    border-radius: 50%;
+    /* font-weight: bold; */
+    font-size: 24px;
+    cursor: pointer;
+    border: 0px;
+}
+
+.todo__tarefas-lista li {
+    border-bottom: 1px solid #ccc;
+    padding: 0.5rem;
+    font-size: 1rem;
+    list-style: none;
+    padding-left: 2rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+}
+
+.todo__tarefas-lista li .checked {
+    color: #ccc;
+    text-decoration: line-through;
+}
+
+.todo__btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.todo__tudo-feito {
+    border: 4px solid #B0CF30;
+    box-sizing: border-box;
+    border-radius: 24px;
+    background-color: transparent;
+    padding: 16px 20px 16px 20px;
+    margin:16px 20px 0px 20px;
+}
+
+.todo__remover-todos {
+    border: 4px solid #B0CF30;
+    box-sizing: border-box;
+    border-radius: 24px;
+    background-color: #B0CF30;
+    padding: 16px 20px 16px 20px;
+    margin:16px 20px 0px 20px;
+}
+
