@@ -7,7 +7,6 @@
 body {
     margin: 0;
     background-color: #9182A6;
-    
 }
 
 .flex {
@@ -35,12 +34,12 @@ body {
     margin: 40px auto 32px auto;
     display: inline-block;
     font-size: 24px;
-    color:  #7E77A0;
+    color: #7E77A0;
 }
 
 .todo-form {
-    text-align: center;
-    margin: 0 auto;
+    justify-content: center;
+    display: flex;
 }
 
 .todo__tarefas__sample {
@@ -61,6 +60,10 @@ body {
     border-radius: 14px;
 }
 
+.todo__tarefas__sample:last-child {
+    opacity: 0.60;
+}
+
 .todo-form__input {
     width: 75%;
     padding: 24px;
@@ -70,7 +73,6 @@ body {
     border: 0px;
     outline: none;
     margin-right: 3%;
-    
 }
 
 .todo-form__input:focus {
@@ -84,13 +86,18 @@ body {
     color: white;
     width: 55px;
     height: 55px;
-    /* padding: 20px; */
     display: inline-block;
     border-radius: 50%;
-    /* font-weight: bold; */
     font-size: 24px;
     cursor: pointer;
     border: 0px;
+}
+
+.todo-form__btn:hover {
+    box-shadow: 0px 16px 24px rgba(126, 119, 160, 0.267);
+    width: 56px;
+    height: 56px;
+    transition: 0.3s;
 }
 
 .todo__tarefas-lista li {
@@ -121,7 +128,14 @@ body {
     border-radius: 24px;
     background-color: transparent;
     padding: 16px 20px 16px 20px;
-    margin:16px 20px 0px 20px;
+    margin: 16px 20px 0px 20px;
+    color: rgb(73, 73, 73);
+}
+
+.todo__tudo-feito:hover {
+    background-color: #B0CF30;
+    box-shadow: 0px 16px 24px rgba(175, 207, 48, 0.205);
+    transition: 0.3s;
 }
 
 .todo__remover-todos {
@@ -130,6 +144,57 @@ body {
     border-radius: 24px;
     background-color: #B0CF30;
     padding: 16px 20px 16px 20px;
-    margin:16px 20px 0px 20px;
+    margin: 16px 20px 0px 20px;
+    color: #494949;
 }
 
+.todo__remover-todos:hover {
+    background-color: transparent;
+    box-shadow: 0px 16px 24px rgba(175, 207, 48, 0.205);
+    transition: 0.3s;
+}
+
+@media only screen and (max-width: 460px) {
+    .todo-form {
+        flex-direction: column;
+    }
+    .todo-form__input {
+        width: 90%;
+        align-self: center;
+        margin: 0 auto;
+    }
+    .todo-form__btn {
+        background-color: #7E77A0;
+        text-transform: uppercase;
+        color: white;
+        width: 90%;
+        height: 55px;
+        border-radius: 24px;
+        align-self: center;
+        margin-top: 8px;
+    }
+    .todo-form__btn:hover {
+        box-shadow: 0px 16px 24px rgba(126, 119, 160, 0.267);
+        width: 90%;
+        transition: 0.3s;
+    }
+    .todo__btn-container {
+        flex-direction: column;
+    }
+    .todo__tudo-feito {
+        width: 90%;
+    }
+
+    .todo__tudo-feito:hover {
+        background-color: #B0CF30;
+        box-shadow: 0px 16px 24px rgba(175, 207, 48, 0.205);
+        transition: 0.3s;
+    }
+    .todo__remover-todos {
+        width: 90%;
+        margin-top: 8px;
+    }
+    .todo__tarefas {
+        margin: 32px auto 24px auto;
+    }
+}
