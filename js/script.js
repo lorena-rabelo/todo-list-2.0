@@ -14,34 +14,34 @@ const btnRemoveAll = document.querySelector('#todoRemoverTodoss');
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
-  const taskText = input.value.trim()
+  const taskText = input.value.trim();
 
-  if (taskText !== ''){
-  createToDoItem (taskText)
-} else {
-alert (`Adicione uma tarefa`);
-input.focus()
-  }
+  if (taskText !== '') {
+    createToDoItem(taskText)
+  } else {
+    input.classList.add('empty');
+    input.addEventListener('animationend', function (e) {
+      input.classList.remove('empty');
+    })
+  };
+  input.focus();
 });
+
 
 // btnAllDone.addEventListener ('click', allDone);
 // btnRemoveAll.addEventListener ('click', removeAll);
 
 
 function createToDoItem(taskText) {
-  
+
   const item = document.createElement('li');
   const texto = document.createElement('p');
   const trash = document.createElement('img');
   sample.remove();
-  trash.src = "icon-trash.svg"; 
+  trash.src = "icon-trash.svg";
   texto.innerText = taskText;
   todoTasks.appendChild(item);
   item.appendChild(texto);
   item.appendChild(trash);
   form.reset();
-}
-
-function allDone (){
-
-}
+};
