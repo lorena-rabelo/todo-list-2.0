@@ -114,10 +114,10 @@ li {
 }
 
 .todo-form__btn:hover {
-    box-shadow: 0px 16px 24px rgba(126, 119, 160, 0.267);
-    width: 56px;
-    height: 56px;
-    transition: 0.3s;
+    box-shadow:0px 16px 24px rgba(126, 119, 160, 0.267);
+    width:56px;
+    height:56px;
+    transition:0.3s;
 }
 
 .todo__tarefas-lista li {
@@ -150,6 +150,10 @@ li {
     padding: 16px 20px 16px 20px;
     margin: 16px 20px 0px 20px;
     color: rgb(73, 73, 73);
+}
+
+.checked {
+    text-decoration: line-through wavy #24bffb;
 }
 
 .todo__tudo-feito:hover {
