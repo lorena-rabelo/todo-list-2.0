@@ -39,7 +39,6 @@ function createToDoItem(taskText) {
   const item = document.createElement('li');
   const texto = document.createElement('p');
   const trash = document.createElement('img');
-  // sample.remove();
   sample.style.display = 'none';
   trash.src = "icon-trash.svg";
   texto.innerText = taskText;
@@ -69,7 +68,6 @@ function handleItem(e) {
   }
 
 }
-
 
 function checkItem(item) {
   item.classList.toggle('checked');
