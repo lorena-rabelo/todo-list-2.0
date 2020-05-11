@@ -139,7 +139,8 @@ li {
 }
 
 .checked {
-    text-decoration: line-through wavy #24bffb;
+    
+    text-decoration: line-through wavy #7E77A0;;
 }
 
 .todo__tudo-feito:hover {

@@ -36,15 +36,15 @@ btnRemoveAll.addEventListener('click', deleteAll);
 
 
 function createToDoItem(taskText) {
-  const item = document.createElement('li');
+  const task = document.createElement('li');
   const texto = document.createElement('p');
   const trash = document.createElement('img');
   sample.style.display = 'none';
   trash.src = "icon-trash.svg";
   texto.innerText = taskText;
-  todoTasks.appendChild(item);
-  item.appendChild(texto);
-  item.appendChild(trash);
+  todoTasks.appendChild(task);
+  task.appendChild(texto);
+  task.appendChild(trash);
   form.reset();
 };
 
@@ -59,23 +59,26 @@ function createToDoItem(taskText) {
 function handleItem(e) {
   const item = e.target;
 
-  if (item.tagName == 'p') {
-    checkItem(item);        // checa ou não a tarefa
+  console.log(item)
+
+  if (item.tagName == 'P') {       // IMPORTANTE!! tagName precisa passar o parâmetro MAIUSCULA
+    console.log('rolou')
+    checkItem(item)        // checa ou não a tarefa
   }
 
-  if (item.tagName == 'img') {
-    deleteItem(item);        // apaga individualmente
+  if (item.tagName == 'IMG') {     // IMPORTANTE!! tagName precisa passar o parâmetro MAIUSCULA
+    console.log('rolou tb')
+    deleteItem();        // apaga individualmente
   }
 
 }
 
 function checkItem(item) {
-  item.classList.toggle('checked');
+  item.classList.toggle('checked')
 }
 
-function deleteItem(item) {
-  const deleteItem = item.parentNode;
-  todoTasks.removeChild(deleteItem);
+function deleteItem() {
+  this.parent
 }
 
 function deleteAll() {
