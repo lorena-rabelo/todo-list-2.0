@@ -79,7 +79,8 @@ function deleteItem(item) {
 }
 
 function deleteAll() {
-  todoTasks.remove();
+  // todoTasks.remove();
+  todoTasks.innerHTML = "";
   sample.style.display = 'block';
 }
 
@@ -100,11 +101,11 @@ function allDone() {
       item.classList.remove('checked');
     })
     btnAllDone.innerText = 'Marcar todos';
-
   }
 }
 
 
-
-
-//deleteAll ta bugando
+//corrigir erros dos navegadores
+//melhorar o estilo do check 
+//fazer drag and drop 
+// colocar margin bottom nos item da lista 
