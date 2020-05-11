@@ -59,16 +59,19 @@ function createToDoItem(taskText) {
 function handleItem(e) {
   const item = e.target;
 
-  console.log(item)
-
   if (item.tagName == 'P') {       // IMPORTANTE!! tagName precisa passar o parâmetro MAIUSCULA
     console.log('rolou')
     checkItem(item)        // checa ou não a tarefa
   }
-
   if (item.tagName == 'IMG') {     // IMPORTANTE!! tagName precisa passar o parâmetro MAIUSCULA
     console.log('rolou tb')
-    deleteItem(item);             // apaga individualmente
+    deleteItem(item); // apaga individualmente    
+    console.log('aaaaaahhh')
+    let tasks = document.querySelectorAll('li');
+    
+    if (sample.style.display = 'none' && tasks.length == 0) {
+      sample.style.display = 'block';
+    }
   }
 }
 
@@ -84,3 +87,6 @@ function deleteAll() {
   todoTasks.remove();
   sample.style.display = 'block';
 }
+
+
+//deleteAll ta bugando
