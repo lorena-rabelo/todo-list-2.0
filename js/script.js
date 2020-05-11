@@ -68,17 +68,16 @@ function handleItem(e) {
 
   if (item.tagName == 'IMG') {     // IMPORTANTE!! tagName precisa passar o parâmetro MAIUSCULA
     console.log('rolou tb')
-    deleteItem();        // apaga individualmente
+    deleteItem(item);             // apaga individualmente
   }
-
 }
 
 function checkItem(item) {
   item.classList.toggle('checked')
 }
 
-function deleteItem() {
-  this.parent
+function deleteItem(item) {
+  item.parentNode.remove()
 }
 
 function deleteAll() {
