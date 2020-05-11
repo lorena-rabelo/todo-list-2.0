@@ -30,8 +30,7 @@ form.addEventListener('submit', (e) => {
 
 
 todoTasks.addEventListener('click', handleItem);
-// texto.addEventListener('click', checkItem);
-// btnAllDone.addEventListener ('click', allDone);
+btnAllDone.addEventListener('click', allDone);
 btnRemoveAll.addEventListener('click', deleteAll);
 
 
@@ -54,21 +53,17 @@ function createToDoItem(taskText) {
 //   console.log(texto);
 // })
 
-
 // funções para tratar os itens da lista individualmente e coletivamente
 function handleItem(e) {
   const item = e.target;
 
   if (item.tagName == 'P') {       // IMPORTANTE!! tagName precisa passar o parâmetro MAIUSCULA
     console.log('rolou')
-    checkItem(item)        // checa ou não a tarefa
+    checkItem(item)                // checa ou não a tarefa
   }
   if (item.tagName == 'IMG') {     // IMPORTANTE!! tagName precisa passar o parâmetro MAIUSCULA
-    console.log('rolou tb')
-    deleteItem(item); // apaga individualmente    
-    console.log('aaaaaahhh')
+    deleteItem(item);              // apaga individualmente    
     let tasks = document.querySelectorAll('li');
-    
     if (sample.style.display = 'none' && tasks.length == 0) {
       sample.style.display = 'block';
     }
@@ -87,6 +82,29 @@ function deleteAll() {
   todoTasks.remove();
   sample.style.display = 'block';
 }
+
+function allDone() {
+  console.log('oeee')
+
+  if (btnAllDone.innerText != 'Desmarcar todos') {
+    let tasksText = document.querySelectorAll('li');
+    console.log(tasksText)
+    tasksText.forEach((item) => {
+      item.classList.add('checked');
+    })
+    btnAllDone.innerText = 'Desmarcar todos'
+  } else {
+    let tasksText = document.querySelectorAll('li');
+    console.log(tasksText)
+    tasksText.forEach((item) => {
+      item.classList.remove('checked');
+    })
+    btnAllDone.innerText = 'Marcar todos';
+
+  }
+}
+
+
 
 
 //deleteAll ta bugando
