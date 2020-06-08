@@ -88,14 +88,14 @@ function allDone() {
   console.log('oeee')
 
   if (btnAllDone.innerText != 'Desmarcar todos') {
-    let tasksText = document.querySelectorAll('li');
+    let tasksText = document.querySelectorAll('p');
     console.log(tasksText)
     tasksText.forEach((item) => {
       item.classList.add('checked');
     })
     btnAllDone.innerText = 'Desmarcar todos'
   } else {
-    let tasksText = document.querySelectorAll('li');
+    let tasksText = document.querySelectorAll('p');
     console.log(tasksText)
     tasksText.forEach((item) => {
       item.classList.remove('checked');
