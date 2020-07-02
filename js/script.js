@@ -47,12 +47,6 @@ function createToDoItem(taskText) {
   form.reset();
 };
 
-//toggle(), se a classe existir naquele elemento, ele a remove, se não existir, ele a adiciona.
-// texto.addEventListener('click', function () {
-//   texto.classList.toggle('checked');
-//   console.log(texto);
-// })
-
 // funções para tratar os itens da lista individualmente e coletivamente
 function handleItem(e) {
   const item = e.target;
