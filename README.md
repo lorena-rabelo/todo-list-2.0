@@ -19,4 +19,4 @@
     - Marcar todos os itens como feito
     - Excluir todos os itens da lista
   
-## Veja o projeto no ar [aqui](https://todo-lorena-rabelo.netlify.app/)
+## Veja o projeto [aqui](https://todo-lorena-rabelo.netlify.app/)
